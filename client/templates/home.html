@@ -6,8 +6,11 @@
           {{> LoggedIn}}
           {{#if spdxdoc}}
             <div class="container spdxDocContainer">
+              <h1>Table of Contents</h1>
               <div class="modal-body" id="spdxDocText">
-                <pre>{{spdxdoc}}</pre>
+                {{#markdown}}
+                {{spdxdoc}}
+                {{/markdown}}
               </div>
             </div>
           {{/if}}

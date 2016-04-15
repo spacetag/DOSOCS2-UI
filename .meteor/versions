@@ -52,10 +52,13 @@ launch-screen@1.0.10
 livedata@1.0.17
 localstorage@1.0.8
 logging@1.0.11
+markdown@1.0.8
 matb33:collection-hooks@0.8.1
 meteor@1.1.13
 meteor-base@1.0.3
 meteor-platform@1.2.5
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 meteortoys:toykit@2.2.1
 minifier-css@1.1.10
 minifier-js@1.1.10
@@ -70,6 +73,7 @@ mongo-id@1.0.3
 msavin:mongol@1.6.2
 nimble:restivus@0.8.10
 npm-bcrypt@0.7.8_2
+npm-container@1.2.0
 npm-mongo@1.4.42
 observe-sequence@1.0.10
 ordered-dict@1.0.6

@@ -1,5 +1,6 @@
 var Future = Npm.require("fibers/future");
 var exec = Npm.require("child_process").exec;
+var toc = Meteor.npmRequire("marked-toc");
 
 Meteor.methods({
   'deleteFile': function(_id) {
@@ -29,7 +30,7 @@ Meteor.methods({
         if(error){
             console.log(error);
         }
-        future.return(stdout.toString());
+        future.return(toc.insert("<!-- toc -->" + stdout.toString()));
     });
     return future.wait();
   }
