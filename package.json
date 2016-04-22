@@ -1,0 +1,22 @@
+{
+  "name": "dosocs2-ui",
+  "version": "0.0.0",
+  "description": "Web interface for DoSOCSv2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UShan89/DOSOCS2-UI"
+  },
+  "author": "",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/UShan89/DOSOCS2-UI/issues"
+  },
+  "homepage": "https://github.com/UShan89/DOSOCS2-UI",
+  "dependencies": {
+    "marked-toc": "^0.3.0"
+  }
+}

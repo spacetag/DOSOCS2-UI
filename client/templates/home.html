@@ -7,23 +7,19 @@
           {{#if spdxdoc}}
             <div class="container spdxDocContainer">
               <div class="modal-body" id="spdxDocText">
-                <pre>
-		    <div class="preview">
-		      {{#markdown}} 
-			{{spdxdoc}}
-		      {{/markdown}}
-		    </div>
-        	</pre>	
+              <!-- Caution: Extra newlines in <pre></pre> may be preserved -->
+              <!-- http://stackoverflow.com/a/9385176/2033574 -->
+                <pre><div class="preview">{{#markdown}}{{spdxdoc}}{{/markdown}}</div></pre>  
               </div>
             </div>
           {{/if}}
         {{else}}
-	  <div class="row"> 
-	    <div class="col-md-6 col-md-offset-3">
+    <div class="row"> 
+      <div class="col-md-6 col-md-offset-3">
             {{> atForm }}
-	   </div>
-	  </div>
+     </div>
+    </div>
         {{/if}}
     </div>
-	{{> Tfooter}}
+  {{> Tfooter}}
 </template>

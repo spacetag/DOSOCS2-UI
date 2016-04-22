@@ -1,3 +1,4 @@
+import toc from 'marked-toc';
 var Future = Npm.require("fibers/future");
 var exec = Npm.require("child_process").exec;
 
@@ -30,7 +31,12 @@ Meteor.methods({
         if(error){
             console.log(error);
         }
-        future.return(stdout.toString());
+        // Add table of contents, and massage text for markdown and aesthetics
+        future.return(toc.insert("# Table of Contents<!-- toc -->" +
+                                 stdout.toString()
+                                 .replace(/(### )(.*)/g, '=== $2 ===') // Replace all `### headings` with `=== headings ===`
+                                 .replace(/_/g, '\\_')                 // Escape underscores (_) for client side markdown rendering
+                                 )); 
     });
     var documentText =  future.wait();
     // Repeated SPDX Generation will update SPDX Document in the meteor mongo database
